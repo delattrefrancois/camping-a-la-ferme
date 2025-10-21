@@ -1,0 +1,22 @@
+version: 2
+updates:
+  # Surveillance des GitHub Actions
+  - package-ecosystem: "github-actions"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+    labels:
+      - "dependencies"
+      - "github-actions"
+
+  # Configuration prête pour npm/yarn (à activer quand vous ajouterez package.json)
+  # Décommentez les lignes ci-dessous quand vous utiliserez des dépendances JavaScript
+  # - package-ecosystem: "npm"
+  #   directory: "/"
+  #   schedule:
+  #     interval: "daily"
+  #   open-pull-requests-limit: 10
+  #   labels:
+  #     - "dependencies"
+  #     - "javascript"
+  #   versioning-strategy: increase
