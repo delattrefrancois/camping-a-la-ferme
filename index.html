@@ -203,7 +203,16 @@
         }
 
         .illustration {
-            display: none; /* Image maintenant en background des cartes */
+            position: absolute;
+            right: 0;
+            top: 0;
+            width: 350px;
+            z-index: 1;
+        }
+
+        .illustration img {
+            width: 100%;
+            height: auto;
         }
 
         .price-cards {
@@ -227,60 +236,24 @@
         .card-green {
             background: #6BC4A6;
             color: white;
-            background-image: url('https://sssite.fr/wp-content/uploads/2024/03/sssite.fr-accueil-filtering-profiles.svg');
-            background-size: 180%;
-            background-position: right center;
-            background-repeat: no-repeat;
-            overflow: hidden;
-        }
-        
-        .card-green::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: rgba(107, 196, 166, 0.85);
-            z-index: 0;
-        }
-        
-        .card-green > * {
             position: relative;
-            z-index: 1;
+            z-index: 2;
         }
 
         .card-dark-green {
             background: #3D5A54;
             color: white;
             margin-left: 30px;
-            background-image: url('https://sssite.fr/wp-content/uploads/2024/03/sssite.fr-accueil-filtering-profiles.svg');
-            background-size: 180%;
-            background-position: right center;
-            background-repeat: no-repeat;
-            overflow: hidden;
-        }
-        
-        .card-dark-green::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: rgba(61, 90, 84, 0.85);
-            z-index: 0;
-        }
-        
-        .card-dark-green > * {
             position: relative;
-            z-index: 1;
+            z-index: 2;
         }
 
         .card-yellow {
             background: #FDB849;
             color: #2D2D2D;
             margin-left: 60px;
+            position: relative;
+            z-index: 2;
         }
 
         .card-icon {
@@ -400,6 +373,12 @@
             .hero-grid {
                 grid-template-columns: 1fr;
                 gap: 60px;
+            }
+
+            .illustration {
+                position: relative;
+                width: 280px;
+                margin: 0 auto;
             }
 
             .price-cards {
