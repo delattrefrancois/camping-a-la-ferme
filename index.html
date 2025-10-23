@@ -368,6 +368,21 @@
             font-weight: bold;
         }
 
+        /* Section Image Feuille */
+        .image-section {
+            text-align: center;
+            padding: 60px 20px;
+            background: #FAFAFA;
+        }
+
+        .image-section img {
+            max-width: 400px;
+            width: 100%;
+            height: auto;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+
         /* Responsive */
         @media (max-width: 1024px) {
             .hero-grid {
@@ -418,6 +433,10 @@
 
             .cta-bottom {
                 flex-direction: column;
+            }
+
+            .image-section img {
+                max-width: 300px;
             }
         }
 
@@ -538,6 +557,11 @@
             <span class="btn-icon">⊕</span>
             Exemples de modèles disponibles dans l'offre
         </a>
+    </div>
+
+    <!-- Section Image Feuille -->
+    <div class="image-section">
+        <img src="images/feuille.webp" alt="Feuille de vigne">
     </div>
 </body>
 </html>
