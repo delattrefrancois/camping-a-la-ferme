@@ -191,7 +191,7 @@
                     .from('landing_page')
                     .select('*')
                     .limit(1)
-                    .single();
+                    .maybeSingle();
 
                 if (error) throw error;
 
