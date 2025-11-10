@@ -225,7 +225,7 @@
 
             contentDiv.innerHTML = `
                 <h1>${data.titre || 'Bienvenue'}</h1>
-                ${data.sous_titre ? `<h2>${data.sous_titre}</h2>` : ''}
+                ${data['sous-titre'] ? `<h2>${data['sous-titre']}</h2>` : ''}
                 <p>${data.description || ''}</p>
                 ${data.bouton_url ? `<a href="${data.bouton_url}" class="cta-button">${data.bouton_texte || 'En savoir plus'}</a>` : ''}
             `;
