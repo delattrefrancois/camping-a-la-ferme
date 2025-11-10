@@ -240,14 +240,14 @@
                     .from('landing_page')
                     .select('*')
                     .limit(1)
-                    .single();
+                    .maybeSingle();
 
                 if (error && error.code !== 'PGRST116') throw error;
 
                 if (data) {
                     // Remplir le formulaire avec les données existantes
                     document.getElementById('titre').value = data.titre || '';
-                    document.getElementById('sous_titre').value = data.sous_titre || '';
+                    document.getElementById('sous_titre').value = data['sous-titre'] || '';
                     document.getElementById('description').value = data.description || '';
                     document.getElementById('image_hero_url').value = data.image_hero_url || '';
                     document.getElementById('bouton_texte').value = data.bouton_texte || 'En savoir plus';
@@ -279,7 +279,7 @@
 
             const formData = {
                 titre: document.getElementById('titre').value,
-                sous_titre: document.getElementById('sous_titre').value || null,
+                'sous-titre': document.getElementById('sous_titre').value || null,
                 description: document.getElementById('description').value,
                 image_hero_url: document.getElementById('image_hero_url').value || null,
                 bouton_texte: document.getElementById('bouton_texte').value || 'En savoir plus',
@@ -293,7 +293,7 @@
                     .from('landing_page')
                     .select('id')
                     .limit(1)
-                    .single();
+                    .maybeSingle();
 
                 let result;
                 if (existing) {
